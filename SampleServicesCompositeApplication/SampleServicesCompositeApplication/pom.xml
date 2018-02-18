@@ -10,14 +10,16 @@
   <description>SampleServicesCompositeApplication</description>
   <properties>
     <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
-    <com.example.SampleServices.endpoint_._ClemencyEP>capp/EnterpriseServiceBus</com.example.SampleServices.endpoint_._ClemencyEP>
     <com.example.SampleServicesRegistry.resource_._RequestMapping>capp/EnterpriseServiceBus</com.example.SampleServicesRegistry.resource_._RequestMapping>
+    <com.example.SampleServices.endpoint_._ClemencyEP>capp/EnterpriseServiceBus</com.example.SampleServices.endpoint_._ClemencyEP>
     <com.example.SampleServicesRegistry.resource_._RequestMapping_outputSchema>capp/EnterpriseServiceBus</com.example.SampleServicesRegistry.resource_._RequestMapping_outputSchema>
     <com.example.SampleServices.endpoint_._PineValleyEP>capp/EnterpriseServiceBus</com.example.SampleServices.endpoint_._PineValleyEP>
+    <com.example.SampleServices.endpoint_._ChannelingFeeEP>capp/EnterpriseServiceBus</com.example.SampleServices.endpoint_._ChannelingFeeEP>
     <com.example.SampleServices.endpoint_._QueryDoctorEP>capp/EnterpriseServiceBus</com.example.SampleServices.endpoint_._QueryDoctorEP>
-    <com.example.SampleServices.api_._HealthcareAPI>capp/EnterpriseServiceBus</com.example.SampleServices.api_._HealthcareAPI>
-    <com.example.SampleServices.endpoint_._GrandOakEP>capp/EnterpriseServiceBus</com.example.SampleServices.endpoint_._GrandOakEP>
+    <com.example.SampleServices.endpoint_._SettlePaymentEP>capp/EnterpriseServiceBus</com.example.SampleServices.endpoint_._SettlePaymentEP>
     <com.example.SampleServicesRegistry.resource_._RequestMapping_inputSchema>capp/EnterpriseServiceBus</com.example.SampleServicesRegistry.resource_._RequestMapping_inputSchema>
+    <com.example.SampleServices.endpoint_._GrandOakEP>capp/EnterpriseServiceBus</com.example.SampleServices.endpoint_._GrandOakEP>
+    <com.example.SampleServices.api_._HealthcareAPI>capp/EnterpriseServiceBus</com.example.SampleServices.api_._HealthcareAPI>
     <com.example.SampleServices.inbound-endpoint_._QueryDoctorInboundEnd>capp/EnterpriseServiceBus</com.example.SampleServices.inbound-endpoint_._QueryDoctorInboundEnd>
   </properties>
   <dependencies>
@@ -74,6 +76,18 @@
       <artifactId>RequestMapping_outputSchema</artifactId>
       <version>1.0.0</version>
       <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.SampleServices.endpoint</groupId>
+      <artifactId>ChannelingFeeEP</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.SampleServices.endpoint</groupId>
+      <artifactId>SettlePaymentEP</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
     </dependency>
   </dependencies>
   <repositories>
