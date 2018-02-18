@@ -21,28 +21,25 @@
             <datamapper config="gov:datamapper/RequestMapping.dmc" inputSchema="gov:datamapper/RequestMapping_inputSchema.json" inputType="JSON" outputSchema="gov:datamapper/RequestMapping_outputSchema.json" outputType="JSON"/>
             <switch source="get-property('Hospital') ">
                 <case regex="grand oak community hospital">
-                    <log description="Grand Oak Log" level="custom">
-                        <property expression="fn:concat('Routing to ', get-property('Hospital')) " name="message"/>
-                    </log>
-                    <property description="Set Hospital Variable" name="uri.var.hospital" scope="default" type="STRING" value="grandoaks"/>
+                    <call-template target="HospitalRoutingSeq">
+                        <with-param name="sethospital" value="grandoaks"/>
+                    </call-template>
                     <call>
                         <endpoint key="GrandOakEP"/>
                     </call>
                 </case>
                 <case regex="clemency medical center">
-                    <log description="Clemency Log" level="custom">
-                        <property expression="fn:concat('Routing to ', get-property('Hospital')) " name="message"/>
-                    </log>
-                    <property description="Set Hospital Variable" name="uri.var.hospital" scope="default" type="STRING" value="clemency"/>
+                    <call-template target="HospitalRoutingSeq">
+                        <with-param name="sethospital" value="clemency"/>
+                    </call-template>
                     <call>
                         <endpoint key="ClemencyEP"/>
                     </call>
                 </case>
                 <case regex="pine valley community hospital">
-                    <log description="Pine Valley Log" level="custom">
-                        <property expression="fn:concat('Routing to ', get-property('Hospital')) " name="message"/>
-                    </log>
-                    <property description="Set Hospital Variable" name="uri.var.hospital" scope="default" type="STRING" value="pinevalley"/>
+                    <call-template target="HospitalRoutingSeq">
+                        <with-param name="sethospital" value="pinevalley"/>
+                    </call-template>
                     <call>
                         <endpoint key="PineValleyEP"/>
                     </call>
