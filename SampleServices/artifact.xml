@@ -5,4 +5,7 @@
     <artifact name="HealthcareAPI" groupId="com.example.SampleServices.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/api/HealthcareAPI.xml</file>
     </artifact>
+    <artifact name="QueryDoctorInboundEnd" groupId="com.example.SampleServices.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/QueryDoctorInboundEnd.xml</file>
+    </artifact>
 </artifacts>
